@@ -142,10 +142,13 @@
   .tab[aria-selected="true"]{background:var(--green); color:#fff; border-color:var(--green)}
   .panel{display:none; grid-template-columns:1.15fr .85fr; gap:24px; align-items:stretch}
   .panel.on{display:grid}
-  .panel .visual{border-radius:var(--r); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-s); background:#111}
+  .panel .visual{position:relative; border-radius:var(--r); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-s); background:#111}
   .panel .visual img{display:block; width:100%; height:100%; min-height:340px; object-fit:cover}
   .panel .visual{display:flex; align-items:center}
   .panel .visual img[src$=".svg"]{height:auto; min-height:0; aspect-ratio:1600/1000; object-fit:fill}
+  .panel .visual .sim-badge{position:absolute; left:14px; bottom:14px; max-width:calc(100% - 28px);
+    background:rgba(22,32,26,.86); color:#f6d79b; border:1px solid rgba(246,215,155,.44);
+    padding:7px 11px; border-radius:999px; font-size:12px; font-weight:900; line-height:1.25}
   .panel .info h3{font-size:24px; margin:0 0 8px}
   .panel .info .rev{display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:800; color:var(--accent-d); background:var(--accent-soft); padding:4px 11px; border-radius:var(--r-pill); margin-bottom:14px}
   .panel .info ul{margin:0; padding:0; list-style:none}
@@ -383,7 +386,10 @@
   </div>
 
   <div class="panel on" id="c1">
-    <div class="visual"><img src="assets/render-stay-pension.svg" alt="스테이·펜션 클러스터 콘셉트 조감도"></div>
+    <div class="visual">
+      <img src="assets/render-stay-pension-3d-l1.jpg" alt="L1 프라이빗 스테이·펜션 클러스터 3D 콘셉트 조감도">
+      <span class="sim-badge">L1 콘셉트 조감도 · 실제 배치/인허가 아님</span>
+    </div>
     <div class="info">
       <span class="rev">1안 · 매각 / 공동사업 / 장기임대</span>
       <h3>프라이빗 스테이·펜션 클러스터</h3>
@@ -398,7 +404,10 @@
     </div>
   </div>
   <div class="panel" id="c2">
-    <div class="visual"><img src="assets/render-village-final.svg" alt="전원주택 단지 최종 콘셉트 조감도"></div>
+    <div class="visual">
+      <img src="assets/render-country-village-3d-l1.jpg" alt="L1 세컨드하우스·전원주택 단지 3D 콘셉트 조감도">
+      <span class="sim-badge">L1 콘셉트 조감도 · 실제 배치/인허가 아님</span>
+    </div>
     <div class="info">
       <span class="rev">2안 · 매각 / 단계 개발 · 최종 조감</span>
       <h3>세컨드하우스·전원주택 단지</h3>
@@ -461,10 +470,12 @@
   <div class="sec-head">
     <div class="sec-kicker">현장 실사</div>
     <h2 class="sec-title">있는 그대로의 현장</h2>
-    <p class="sec-note">항공, 진입로, 조감도(AVUE 렌더), 지적도, 구적표를 한 번에 확인할 수 있습니다.</p>
+    <p class="sec-note">항공, 진입로, L1 콘셉트 3D 조감도, 기존 조감도(AVUE 렌더), 지적도, 구적표를 한 번에 확인할 수 있습니다.</p>
   </div>
   <div class="gallery">
     <figure class="big"><img src="assets/site-aerial-top.jpg" alt="항공 전경"><figcaption>항공 전경 · 규모와 평탄지·진입 동선</figcaption></figure>
+    <figure><img src="assets/render-stay-pension-3d-l1.jpg" alt="L1 스테이·펜션 클러스터 3D 콘셉트"><figcaption>L1 3D · 스테이·펜션 클러스터</figcaption></figure>
+    <figure><img src="assets/render-country-village-3d-l1.jpg" alt="L1 전원주택 단지 3D 콘셉트"><figcaption>L1 3D · 전원주택 단지</figcaption></figure>
     <figure><img src="assets/site-entry-road.jpg" alt="진입로"><figcaption>6m 진입로</figcaption></figure>
     <figure><img src="assets/project-render-reference.jpg" alt="조감도 AVUE 렌더"><figcaption>조감도 (AVUE 렌더)</figcaption></figure>
     <figure><img src="assets/track-a-small-warehouse.jpg" alt="Track A 소규모 분산 창고형"><figcaption>Track A · 소규모 분산 창고형</figcaption></figure>
@@ -482,15 +493,25 @@
     <p class="sec-note">둔내IC 권역 기준 약식 설명. 웰리힐리권 체류 수요와 둔내 생활권을 함께 설명할 수 있는 위치입니다. 교통상황에 따라 달라질 수 있으며 공식 소요시간으로 확정하지 않습니다.</p>
   </div>
   <div class="access">
-    <div class="map-shot">
-      <div style="position:relative">
-        <img src="assets/site-aerial-top.jpg" alt="현장 항공 — 전원주택 2동 위치 표시">
-        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none">
-          <ellipse cx="56" cy="66" rx="24" ry="20" fill="none" stroke="#f0b429" stroke-width="1.1" stroke-dasharray="3 2"/>
-        </svg>
-        <span style="position:absolute; left:56%; top:38%; transform:translateX(-50%); background:rgba(22,32,26,.88); color:#f6d79b; font-size:12px; font-weight:800; padding:5px 11px; border-radius:999px; white-space:nowrap">▼ 전원주택 2동 실재 · 허가취득</span>
+    <div style="display:grid; gap:16px; min-width:0">
+      <div class="map-shot">
+        <img src="assets/access-map-local.jpg" alt="현장 주변 지도 — 자포곡리 현장, 둔내IC, 둔내역, 웰리힐리파크">
+        <div class="cap">현장(자포곡리 2) 기준 둔내IC·둔내역·웰리힐리파크 위치 · 지도 출처: 네이버지도 캡처</div>
       </div>
-      <div class="cap">둔내IC 권역 · 6m 진입로 접근 · 점선 원 안이 실재 전원주택 2동 위치입니다</div>
+      <div class="map-shot">
+        <img src="assets/access-map-metro.jpg" alt="서울에서 횡성 둔내권까지 영동고속도로 접근축 광역 지도">
+        <div class="cap">서울 → 영동고속도로 축 → 횡성 둔내권 · 수도권 주말 체류 수요 접근 맥락</div>
+      </div>
+      <div class="map-shot">
+        <div style="position:relative">
+          <img src="assets/site-aerial-top.jpg" alt="현장 항공 — 전원주택 2동 위치 표시">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none">
+            <ellipse cx="56" cy="66" rx="24" ry="20" fill="none" stroke="#f0b429" stroke-width="1.1" stroke-dasharray="3 2"/>
+          </svg>
+          <span style="position:absolute; left:56%; top:38%; transform:translateX(-50%); background:rgba(22,32,26,.88); color:#f6d79b; font-size:12px; font-weight:800; padding:5px 11px; border-radius:999px; white-space:nowrap">▼ 전원주택 2동 실재 · 허가취득</span>
+        </div>
+        <div class="cap">현장 항공 · 점선 원 안이 실재 전원주택 2동 위치입니다</div>
+      </div>
     </div>
     <div class="kpis">
       <div class="kpi"><small>고속도로</small><b>둔내IC 권역</b></div>
