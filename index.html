@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>횡성 둔내면 약 9,000평 창고·야드형 사업용지 · 토지주 직접 매각</title>
+<style>
+  /* ============================================================
+     DESIGN SYSTEM — 신뢰 우선 부동산 정보 레이어 (양평 시안과 동일 토큰)
+     ============================================================ */
+  :root{
+    --ink:#16201a; --ink-2:#3c463c; --muted:#697465;
+    --paper:#ffffff; --bg:#f6f7f2; --soft:#eef3ea; --line:#dfe4d7;
+    --green:#2c6a48; --green-d:#1e4c33; --green-soft:#e7f1e8;
+    --accent:#c2652f; --accent-d:#a5511f; --accent-soft:#fbebdd;
+    --ok:#2c7a4b; --ok-bg:#e6f2e9;
+    --check:#b7791f; --check-bg:#fdf3dc;
+    --info:#3a5a78; --info-bg:#e8f0f6;
+    --shadow:0 20px 50px rgba(22,32,26,.10);
+    --shadow-s:0 6px 20px rgba(22,32,26,.07);
+    --r:14px; --r-s:10px; --r-pill:999px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink);
+    font-family:"Pretendard","Noto Sans KR","Segoe UI",Arial,sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased; font-feature-settings:"tnum" 1}
+  a{color:inherit}
+  h1,h2,h3{letter-spacing:-.01em; word-break:keep-all}
+  .wrap{max-width:1140px; margin:0 auto; padding:0 22px}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* 상단바 */
+  .topbar{position:sticky; top:0; z-index:40; background:rgba(246,247,242,.86);
+    backdrop-filter:blur(14px); border-bottom:1px solid var(--line)}
+  .topbar .wrap{display:flex; align-items:center; gap:16px; height:62px}
+  .brand{font-weight:800; font-size:16px; white-space:nowrap; display:flex; align-items:center; gap:9px; flex-shrink:0}
+  .brand .dot{width:9px; height:9px; border-radius:50%; background:var(--green)}
+  .owner-chip{font-size:12px; font-weight:800; color:var(--green-d);
+    background:var(--green-soft); border:1px solid #cfe4d3; padding:5px 10px; border-radius:var(--r-pill); white-space:nowrap}
+  .nav{margin-left:auto; display:flex; gap:2px; overflow-x:auto; scrollbar-width:none; min-width:0}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{font-size:14px; color:var(--muted); text-decoration:none; padding:8px 11px; border-radius:8px; white-space:nowrap}
+  .nav a:hover{background:var(--soft); color:var(--ink)}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:7px; white-space:nowrap;
+    min-height:44px; padding:11px 18px; border-radius:var(--r-s); font-weight:800; font-size:15px;
+    text-decoration:none; border:1px solid transparent; cursor:pointer; transition:.15s}
+  .btn.primary{background:var(--accent); color:#fff; box-shadow:0 8px 18px rgba(194,101,47,.28)}
+  .btn.primary:hover{background:var(--accent-d)}
+  .btn.ghost{background:var(--paper); color:var(--ink); border-color:var(--line)}
+  .btn.light{background:rgba(255,255,255,.14); color:#fff; border-color:rgba(255,255,255,.5)}
+  .btn.light:hover{background:rgba(255,255,255,.24)}
+  .topbar .btn{min-height:38px; padding:8px 14px; font-size:14px; flex-shrink:0}
+
+  /* 히어로 */
+  .hero{position:relative; isolation:isolate; color:#fff; min-height:72vh; display:flex; align-items:center;
+    background-color:#233a2a;
+    background-image:linear-gradient(100deg,rgba(12,22,14,.88) 0%,rgba(12,22,14,.72) 34%,rgba(12,22,14,.28) 62%,rgba(12,22,14,.05) 100%),
+      url("assets/project-render-reference.jpg");
+    background-position:center, center 68%; background-size:cover, cover; background-repeat:no-repeat}
+  .hero-inner{padding-top:120px; padding-bottom:64px; width:100%}
+  .hero h1,.hero .lead{text-shadow:0 2px 12px rgba(0,0,0,.5)}
+  .hero h1{max-width:13ch; line-height:1.14}
+  .hero .lead{max-width:46ch; line-height:1.7}
+  .render-note{margin:16px 0 0; font-size:12px; color:rgba(255,255,255,.72); text-shadow:0 1px 6px rgba(0,0,0,.6)}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:800;
+    padding:8px 13px; border-radius:var(--r-pill); background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.42); backdrop-filter:blur(4px)}
+  .hero h1{font-size:clamp(34px,6.2vw,68px); line-height:1.06; margin:20px 0 16px; max-width:16ch}
+  .hero .lead{font-size:clamp(17px,2.1vw,21px); color:rgba(255,255,255,.9); max-width:58ch; margin:0 0 26px}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px}
+  .hero-stats{display:flex; flex-wrap:wrap; gap:0; border:1px solid rgba(255,255,255,.28);
+    border-radius:var(--r); background:rgba(12,18,13,.60); backdrop-filter:blur(8px); overflow:hidden; max-width:780px}
+  .hero-stats .s{flex:1 1 25%; min-width:0; padding:15px 18px; border-right:1px solid rgba(255,255,255,.16)}
+  .hero-stats .s:last-child{border-right:0}
+  .hero-stats .s small{display:block; font-size:12.5px; color:rgba(255,255,255,.74); margin-bottom:6px}
+  .hero-stats .s b{display:block; font-size:19px; font-weight:800; line-height:1.25; word-break:keep-all}
+  .hero-stats .s .conv{display:block; margin-top:3px; font-size:12px; color:#f0c98a; font-weight:700; line-height:1.3}
+  .price-strong{color:#f6d79b}
+
+  /* 신뢰 배지 바 */
+  .trust{margin-top:-30px; position:relative; z-index:5}
+  .trust-card{background:var(--paper); border:1px solid var(--line); border-radius:var(--r); box-shadow:var(--shadow); padding:20px 22px}
+  .trust-head{display:flex; align-items:center; gap:10px; margin-bottom:14px; flex-wrap:wrap}
+  .trust-head h2{font-size:16px; margin:0}
+  .trust-head .hint{font-size:13px; color:var(--muted)}
+  .badges{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+  .badge{border:1px solid var(--line); border-radius:var(--r-s); padding:13px 14px; background:#fcfdfb}
+  .badge .lab{display:flex; align-items:center; gap:7px; font-size:13px; color:var(--muted); margin-bottom:7px}
+  .badge .st{display:inline-flex; align-items:center; gap:6px; font-size:13.5px; font-weight:800; padding:4px 9px; border-radius:var(--r-pill)}
+  .st.ok{color:var(--ok); background:var(--ok-bg)}
+  .st.check{color:var(--check); background:var(--check-bg)}
+  .st .ic{width:8px; height:8px; border-radius:50%; background:currentColor}
+  .trust-note{margin:14px 0 0; font-size:12.5px; color:var(--muted)}
+
+  /* 섹션 공통 */
+  section{padding:56px 0}
+  .sec-kicker{font-size:13px; font-weight:800; color:var(--accent-d); letter-spacing:.04em; text-transform:uppercase}
+  .sec-title{font-size:clamp(26px,3.6vw,40px); line-height:1.16; margin:10px 0 0}
+  .sec-note{color:var(--muted); max-width:62ch; margin:12px 0 0}
+  .sec-head{margin-bottom:28px}
+
+  /* 청중 라우터 */
+  .router{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  .route{position:relative; display:block; text-decoration:none; background:var(--paper);
+    border:1px solid var(--line); border-radius:var(--r); padding:24px; transition:.18s; overflow:hidden}
+  .route:hover{border-color:var(--green); box-shadow:var(--shadow-s); transform:translateY(-3px)}
+  .route .tag{font-size:12px; font-weight:800; color:#fff; background:var(--green); padding:4px 10px; border-radius:var(--r-pill)}
+  .route h3{margin:16px 0 8px; font-size:20px}
+  .route p{margin:0; color:var(--muted); font-size:15px}
+  .route .go{margin-top:16px; font-weight:800; color:var(--green-d); font-size:14px; display:inline-flex; gap:6px}
+  .route .go::after{content:"→"; transition:.18s}
+  .route:hover .go::after{transform:translateX(4px)}
+
+  /* 팩트 시트 */
+  .fact-grid{display:grid; grid-template-columns:1.3fr .9fr; gap:22px; align-items:start}
+  .fact-table{background:var(--paper); border:1px solid var(--line); border-radius:var(--r); overflow:hidden; box-shadow:var(--shadow-s)}
+  .fact-row{display:grid; grid-template-columns:150px 1fr; gap:14px; padding:15px 20px; border-bottom:1px solid var(--line)}
+  .fact-row:last-child{border-bottom:0}
+  .fact-row .k{color:var(--muted); font-size:14px; font-weight:700}
+  .fact-row .v{font-size:15.5px; color:var(--ink)}
+  .fact-row .v .mini{display:inline-flex; align-items:center; gap:5px; font-size:12px; font-weight:800; padding:2px 8px; border-radius:var(--r-pill); margin-left:8px}
+  .mini.ok{color:var(--ok); background:var(--ok-bg)}
+  .mini.check{color:var(--check); background:var(--check-bg)}
+  .toggle{display:inline-flex; border:1px solid var(--line); border-radius:var(--r-pill); overflow:hidden; margin-left:8px; vertical-align:middle}
+  .toggle button{border:0; background:var(--paper); color:var(--muted); font-size:12px; font-weight:800; padding:4px 12px; cursor:pointer}
+  .toggle button.on{background:var(--green); color:#fff}
+  .price-card{background:linear-gradient(160deg,var(--green-d),var(--green)); color:#fff; border-radius:var(--r); padding:26px; box-shadow:var(--shadow)}
+  .price-card small{opacity:.8; font-size:13px}
+  .price-card .opt{display:flex; justify-content:space-between; align-items:baseline; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.2)}
+  .price-card .opt:first-of-type{border-top:1px solid rgba(255,255,255,.2); margin-top:12px}
+  .price-card .opt .lab2{font-size:14px; opacity:.9}
+  .price-card .opt .big{font-size:30px; font-weight:800}
+  .price-card .opt .big small{font-size:15px; opacity:.85}
+  .price-card .neg{display:inline-block; font-size:12.5px; font-weight:800; background:rgba(255,255,255,.18); padding:3px 10px; border-radius:var(--r-pill); margin-top:3px}
+  .price-card .cta{margin-top:18px}
+
+  /* 콘셉트 탭 */
+  .tabs{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px}
+  .tab{border:1px solid var(--line); background:var(--paper); color:var(--ink-2); font-weight:800; font-size:14.5px;
+    padding:10px 16px; border-radius:var(--r-pill); cursor:pointer; transition:.15s}
+  .tab[aria-selected="true"]{background:var(--green); color:#fff; border-color:var(--green)}
+  .panel{display:none; grid-template-columns:1.15fr .85fr; gap:24px; align-items:stretch}
+  .panel.on{display:grid}
+  .panel .visual{border-radius:var(--r); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-s); background:#111}
+  .panel .visual img{display:block; width:100%; height:100%; min-height:340px; object-fit:cover}
+  .panel .info h3{font-size:24px; margin:0 0 8px}
+  .panel .info .rev{display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:800; color:var(--accent-d); background:var(--accent-soft); padding:4px 11px; border-radius:var(--r-pill); margin-bottom:14px}
+  .panel .info ul{margin:0; padding:0; list-style:none}
+  .panel .info li{position:relative; padding:9px 0 9px 26px; border-bottom:1px dashed var(--line); font-size:15px}
+  .panel .info li::before{content:"✓"; position:absolute; left:0; top:9px; color:var(--green); font-weight:900}
+  .panel .info li:last-child{border-bottom:0}
+  /* 존 배치 전용 */
+  .zone{display:grid; grid-template-columns:64px 1fr; gap:14px; align-items:center; padding:11px 0; border-bottom:1px dashed var(--line)}
+  .zone:last-child{border-bottom:0}
+  .zone .z{display:inline-flex; align-items:center; justify-content:center; width:64px; height:34px; border-radius:8px; font-weight:900; font-size:13px; color:#fff; background:var(--green)}
+  .zone.z2 .z{background:var(--accent)}
+  .zone.z5 .z{background:var(--muted)}
+  .zone b{font-size:15.5px}
+  .zone span{display:block; color:var(--muted); font-size:13.5px}
+
+  /* 갤러리 */
+  .gallery{display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:180px; gap:12px}
+  .gallery figure{margin:0; position:relative; overflow:hidden; border-radius:var(--r-s); border:1px solid var(--line)}
+  .gallery img{width:100%; height:100%; object-fit:cover; display:block; transition:.4s}
+  .gallery figure:hover img{transform:scale(1.05)}
+  .gallery figure figcaption{position:absolute; left:0; right:0; bottom:0; padding:12px 14px 11px; color:#fff; font-size:13px; font-weight:700;
+    background:linear-gradient(180deg,transparent,rgba(0,0,0,.72))}
+  .gallery .big{grid-column:span 2; grid-row:span 2}
+
+  /* 입지 */
+  .access{display:grid; grid-template-columns:1.2fr .8fr; gap:22px; align-items:start}
+  .map-shot{border-radius:var(--r); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-s); background:var(--paper)}
+  .map-shot img{width:100%; display:block; aspect-ratio:16/10; object-fit:cover}
+  .map-shot .cap{padding:12px 16px; font-size:13px; color:var(--muted)}
+  .kpis{display:grid; gap:12px}
+  .kpi{background:var(--paper); border:1px solid var(--line); border-radius:var(--r-s); padding:16px 18px; display:flex; justify-content:space-between; align-items:center}
+  .kpi small{color:var(--muted); font-size:13px}
+  .kpi b{font-size:19px; color:var(--green-d)}
+
+  /* 정직 고지 */
+  .honest{background:var(--paper); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .honest .top{background:var(--soft); padding:20px 24px; border-bottom:1px solid var(--line)}
+  .honest .top h2{margin:0; font-size:22px; display:flex; align-items:center; gap:10px}
+  .honest .top p{margin:8px 0 0; color:var(--muted); font-size:14.5px}
+  .honest .body{display:grid; grid-template-columns:1fr 1fr; gap:0}
+  .honest .col{padding:22px 24px}
+  .honest .col+.col{border-left:1px solid var(--line)}
+  .honest .col h3{font-size:15px; margin:0 0 12px}
+  .honest ul{margin:0; padding:0; list-style:none}
+  .honest li{padding:8px 0 8px 24px; position:relative; font-size:14.5px; border-bottom:1px dashed var(--line)}
+  .honest li:last-child{border-bottom:0}
+  .honest .strong li::before{content:"●"; position:absolute; left:2px; color:var(--ok); font-size:10px; top:11px}
+  .honest .todo li::before{content:"○"; position:absolute; left:2px; color:var(--check); font-size:11px; top:10px; font-weight:900}
+
+  /* 문의 CTA */
+  .contact{background:linear-gradient(155deg,var(--green-d),#173d29); color:#fff; border-radius:var(--r); padding:44px; text-align:center; box-shadow:var(--shadow)}
+  .contact h2{font-size:clamp(26px,3.4vw,38px); margin:0 0 12px}
+  .contact p{color:rgba(255,255,255,.86); max-width:54ch; margin:0 auto 24px}
+  .contact .actions{display:flex; flex-wrap:wrap; gap:12px; justify-content:center}
+  .contact .note{margin-top:22px; font-size:12.5px; color:rgba(255,255,255,.62)}
+
+  /* 푸터 */
+  footer{padding:36px 0 60px; color:var(--muted); font-size:13.5px}
+  footer .disc{background:var(--paper); border:1px solid var(--line); border-left:4px solid var(--check); border-radius:var(--r-s); padding:18px 20px; margin-bottom:20px}
+  footer .disc b{color:var(--ink)}
+  footer .meta{display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between}
+
+  /* 반응형 */
+  @media (max-width:900px){
+    .badges{grid-template-columns:1fr 1fr}
+    .router,.honest .body{grid-template-columns:1fr}
+    .honest .col+.col{border-left:0; border-top:1px solid var(--line)}
+    .fact-grid,.panel.on,.access{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr 1fr; grid-auto-rows:150px}
+    .gallery .big{grid-column:span 2; grid-row:span 1}
+    .hero-stats .s{flex-basis:50%; border-bottom:1px solid rgba(255,255,255,.16)}
+    .hero{background-image:linear-gradient(180deg,rgba(12,22,14,.50) 0%,rgba(12,22,14,.62) 55%,rgba(12,22,14,.88) 100%),
+      url("assets/project-render-reference.jpg"); background-position:center, center 62%}
+  }
+  @media (max-width:560px){
+    .badges,.gallery{grid-template-columns:1fr}
+    .gallery .big{grid-column:auto; grid-row:auto}
+    .contact{padding:30px 22px}
+    .brand .owner-chip{display:none}
+    .hero{min-height:0}
+    .hero-inner{padding-top:96px; padding-bottom:34px}
+    .hero h1{font-size:30px; line-height:1.2; margin:16px 0 14px}
+    .hero .lead{font-size:15.5px; margin-bottom:22px}
+    .hero-stats .s{padding:13px 14px}
+    .hero-stats .s b{font-size:16.5px}
+    .hero-stats .s small{margin-bottom:4px}
+    .fact-row{grid-template-columns:1fr; gap:4px; padding:13px 16px}
+    .fact-row .k{font-size:12.5px}
+  }
+  @media print{.topbar,.hero-actions,.contact .actions{display:none}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand"><span class="dot"></span>횡성 둔내 사업용지
+      <span class="owner-chip">토지주 직접 매각</span>
+    </div>
+    <nav class="nav">
+      <a href="#trust">확인상태</a>
+      <a href="#router">검토대상</a>
+      <a href="#facts">토지정보</a>
+      <a href="#concepts">사업콘셉트</a>
+      <a href="#field">현장자료</a>
+      <a href="#access">입지·접근</a>
+      <a href="#honest">확인 필요</a>
+    </nav>
+    <a href="#contact" class="btn primary">검토 문의</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="eyebrow">◈ 강원 횡성군 둔내면 · 웰리힐리권 · 소유자 직접 매각</span>
+    <h1>약 1,800평 건축허가·토목 완료, 체류형 스테이·전원주택 프로젝트</h1>
+    <p class="lead">단순 임야가 아니라 허가·토목이 일부 진행된 프로젝트 인수 후보입니다. 프라이빗 스테이·펜션과 전원주택 단지를 메인으로, 창고·야드형 사업용지까지 함께 검토할 수 있습니다. 중개 없이 토지주가 직접 자료를 제공합니다.</p>
+    <div class="hero-actions">
+      <a href="#concepts" class="btn primary">사업 콘셉트 보기</a>
+      <a href="#facts" class="btn light">토지 정보</a>
+      <a href="#access" class="btn light">지도·교통</a>
+    </div>
+    <p class="render-note">※ 배경 이미지는 완공 예시 조감도(참고)이며 실제 현장과 다를 수 있습니다.</p>
+    <div class="hero-stats">
+      <div class="s"><small>소재지</small><b>횡성 둔내면 자포곡리</b></div>
+      <div class="s"><small>면적</small><b class="num">약 9,000평</b><span class="conv num">29,813㎡ · 외 33필지</span></div>
+      <div class="s"><small>진행 상태</small><b class="num">약 1,800평 허가·토목</b><span class="conv">완료 메모 · 유효성 확인</span></div>
+      <div class="s"><small>희망 매각가</small><b class="price-strong num">16억 / 21억</b><span class="conv">토지 / 주택 2동 포함</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap trust" id="trust">
+  <div class="trust-card">
+    <div class="trust-head">
+      <h2>자료 확인 상태</h2>
+      <span class="hint">숨기지 않고 있는 그대로 표기합니다 · 기준일 2026-06-28</span>
+    </div>
+    <div class="badges">
+      <div class="badge">
+        <div class="lab">필지 / 주소</div>
+        <span class="st check"><span class="ic"></span>외 33필지·주소혼재 정리중</span>
+      </div>
+      <div class="badge">
+        <div class="lab">허가 / 토목</div>
+        <span class="st check"><span class="ic"></span>약 1,800평 완료 메모·유효성 확인</span>
+      </div>
+      <div class="badge">
+        <div class="lab">지목 / 용도</div>
+        <span class="st check"><span class="ic"></span>계획관리지역(필지별 확인)</span>
+      </div>
+      <div class="badge">
+        <div class="lab">진입도로</div>
+        <span class="st ok"><span class="ic"></span>6m 도로 진입 확인</span>
+      </div>
+    </div>
+    <p class="trust-note">※ ‘확인중/확인 필요’ 항목은 검토 신뢰도를 위해 감추지 않고 공개합니다. 관심 매수자에게는 필지목록·등기·토지이용계획확인원·지적도·허가서를 발급하여 제공합니다.</p>
+  </div>
+</div>
+
+<main>
+<!-- 청중 라우터 -->
+<section id="router"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-kicker">누가 보시나요</div>
+    <h2 class="sec-title">검토 목적에 맞는 자료로 안내합니다</h2>
+    <p class="sec-note">스테이·펜션 운영사, 전원주택 개발·시공사, 지역 중개·투자(창고 실사용 포함) 검토자에게 각각 다른 각도로 열려 있습니다.</p>
+  </div>
+  <div class="router">
+    <a href="#concepts" class="route">
+      <span class="tag">스테이·펜션 운영사</span>
+      <h3>체류형 운영 인수</h3>
+      <p>프라이빗 스테이·펜션 클러스터와 전원주택 단지 콘셉트, 통매각·공동사업·장기임대 수익모델을 정리했습니다.</p>
+      <span class="go">개발 콘셉트 보기</span>
+    </a>
+    <a href="#facts" class="route">
+      <span class="tag">전원주택 개발·시공사</span>
+      <h3>허가·토목 진행 인수</h3>
+      <p>약 1,800평 건축허가·토목 완료 메모와 단독주택 2동, 가격 옵션을 확인하세요. 실사 속도가 빠른 프로젝트입니다.</p>
+      <span class="go">토지 정보·가격 보기</span>
+    </a>
+    <a href="#access" class="route">
+      <span class="tag">중개 · 투자 · 창고 실사용</span>
+      <h3>입지·대안 수익 검토</h3>
+      <p>웰리힐리권 체류 수요, 둔내IC 접근, 창고·야드형 대안 수익까지 매수자에게 바로 전달할 수 있게 구성했습니다.</p>
+      <span class="go">입지·접근 보기</span>
+    </a>
+  </div>
+</div></section>
+
+<!-- 팩트 시트 -->
+<section id="facts"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-kicker">토지 정보</div>
+    <h2 class="sec-title">핵심 팩트 시트</h2>
+    <p class="sec-note">면적은 <b>평/㎡</b>를 눌러 전환할 수 있습니다. 확인 상태 배지가 붙은 값은 발급 서류로 최종 확정됩니다.</p>
+  </div>
+  <div class="fact-grid">
+    <div class="fact-table">
+      <div class="fact-row"><div class="k">소재지</div><div class="v">강원특별자치도 횡성군 둔내면 자포곡리 외 33필지</div></div>
+      <div class="fact-row"><div class="k">지번 / 주소</div><div class="v">외 33필지 <span class="mini check">자포곡리·우용리 혼재 정리 필요</span></div></div>
+      <div class="fact-row"><div class="k">면적</div><div class="v"><span class="num" data-pyeong="약 9,000평" data-sqm="29,813㎡">약 9,000평</span>
+        <span class="toggle"><button class="on" data-u="pyeong">평</button><button data-u="sqm">㎡</button></span>
+        <span class="mini check">대장 확인중</span></div></div>
+      <div class="fact-row"><div class="k">진행 상태</div><div class="v">약 1,800평 건축허가 득 + 토목공사 완료, 나머지 건축허가 진행 중(메모) <span class="mini check">허가 유효성 확인</span></div></div>
+      <div class="fact-row"><div class="k">구성</div><div class="v">단독주택 대지 약 300평 · 건물 30평 2개동(자포곡리 2·2-1번지)</div></div>
+      <div class="fact-row"><div class="k">지목 / 용도</div><div class="v">계획관리지역(구적표 표기) <span class="mini check">토지이용계획확인원 확인</span></div></div>
+      <div class="fact-row"><div class="k">진입도로</div><div class="v">6m 도로 진입 <span class="mini ok"><span class="ic"></span>확인</span> · 둔내IC 권역</div></div>
+      <div class="fact-row"><div class="k">매각 방식</div><div class="v">토지 단독(16억) 또는 주택 2동 패키지(21억) · 통매각 우선</div></div>
+      <div class="fact-row"><div class="k">입지</div><div class="v">둔내면·웰리힐리권 체류 수요 · 둔내IC 접근</div></div>
+    </div>
+    <div class="price-card">
+      <small>희망 매각가 (두 가지 옵션)</small>
+      <div class="opt"><span class="lab2">토지만</span><span class="big num">16<small>억원</small></span></div>
+      <div class="opt"><span class="lab2">전원주택 2동 포함</span><span class="big num">21<small>억원</small></span></div>
+      <span class="neg">협의 가능 · 통매각 기준</span>
+      <a href="tel:010-5257-9301" class="btn light cta" style="width:100%">📞 가격·조건 문의 010-5257-9301</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- 사업 콘셉트 탭 -->
+<section id="concepts"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-kicker">사업자 관점</div>
+    <h2 class="sec-title">이 부지로 그릴 수 있는 사업 콘셉트</h2>
+    <p class="sec-note">공식 서류·인허가 확인 전 예비 콘셉트입니다. 규모는 단정하지 않으며, 매수자 검토를 돕는 방향 제안입니다.</p>
+  </div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" aria-selected="true" data-t="c1">스테이·펜션 클러스터</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="c2">전원주택 단지</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="c3">창고·야드형 (보조)</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="c4">부지 구성 (1차·2차)</button>
+    <button class="tab" role="tab" aria-selected="false" data-t="c5">구적표·보유 자료</button>
+  </div>
+
+  <div class="panel on" id="c1">
+    <div class="visual"><img src="assets/site-aerial-top.jpg" alt="횡성 둔내 자포곡리 현장 항공"></div>
+    <div class="info">
+      <span class="rev">1안 · 매각 / 공동사업 / 장기임대</span>
+      <h3>프라이빗 스테이·펜션 클러스터</h3>
+      <ul>
+        <li>둔내·웰리힐리권 체류 수요를 겨냥한 스테이·펜션 운영형</li>
+        <li>약 1,800평 건축허가·토목 완료 메모 → 프로젝트 인수형</li>
+        <li>통매각 / 공동사업 / 장기임대 / 단계 개발 선택 가능</li>
+        <li>펜션·스테이 운영사, 원주·횡성권 시공사 타깃</li>
+        <li>규모·배치는 측량·허가 확인 후 확정</li>
+      </ul>
+      <p style="margin:14px 0 0; font-size:13px; color:var(--muted)">※ 현장 항공 이미지(L1)입니다. 펜션 동수·배치는 측량·허가 검토 후 확정됩니다.</p>
+    </div>
+  </div>
+  <div class="panel" id="c2">
+    <div class="visual"><img src="assets/site-entry-road.jpg" alt="진입로와 현장"></div>
+    <div class="info">
+      <span class="rev">2안 · 매각 / 단계 개발</span>
+      <h3>세컨드하우스·전원주택 단지</h3>
+      <ul>
+        <li>세컨드하우스 수요를 겨냥한 전원주택 단지 대안</li>
+        <li>단독주택 대지 약 300평 + 기존 30평 2개동 활용</li>
+        <li>단계 개발로 일부 구역부터 순차 사업화</li>
+        <li>소형 시행·시공사 대상, 실사·의사결정 속도 빠름</li>
+        <li>경계·접도·허가 확인 후 규모 확정</li>
+      </ul>
+    </div>
+  </div>
+  <div class="panel" id="c3">
+    <div class="visual"><img src="assets/project-render-reference.jpg" alt="창고·야드형 대안 조감도(AVUE 렌더)"></div>
+    <div class="info">
+      <span class="rev">보조 수익안 · 운영 / 임대</span>
+      <h3>창고·야드형 사업용지 (대안)</h3>
+      <ul>
+        <li>대형 물류센터보다 중소형 창고·야드형 보관 대안</li>
+        <li>잔여 평탄지 + 6m 진입 동선을 사업용지로 활용</li>
+        <li>자재·장비 보관, 지역 배송 베이스 수요 대응</li>
+        <li>산지전용·개발행위 조건 확인 후 규모 확정</li>
+      </ul>
+      <p style="margin:14px 0 0; font-size:13px; color:var(--muted)">※ 조감도(AVUE 렌더)는 창고형 대안 참고 이미지입니다. 확정 배치가 아닙니다.</p>
+    </div>
+  </div>
+  <div class="panel" id="c4">
+    <div class="visual"><img src="assets/parcel-plan-capture.jpg" alt="횡성 둔내 실제 부지 배치도 — 1차허가부지·2차사업부지·추가매입예정부지"></div>
+    <div class="info">
+      <span class="rev">배치도 기준 · 부지 구성</span>
+      <h3>실제 배치도 기준 부지 구성</h3>
+      <div class="zone"><span class="z" style="background:#3a5a78">1차</span><div><b>1차허가부지</b><span>약 1,800평 건축허가·토목 완료 메모 · 유효성 확인 필요</span></div></div>
+      <div class="zone"><span class="z" style="background:var(--green)">2차</span><div><b>2차사업부지</b><span>나머지 건축허가 진행 중 · 잔여 평탄지·진입 동선</span></div></div>
+      <div class="zone"><span class="z" style="background:var(--check)">제외</span><div><b>추가매입예정부지 84평</b><span>소유·매입 미확정 — 매물 면적서 제외</span></div></div>
+      <div class="zone"><span class="z" style="background:var(--check)">제외</span><div><b>추가매입예정부지 30평</b><span>소유·매입 미확정 — 매물 면적서 제외</span></div></div>
+      <p style="margin:14px 0 0; font-size:13px; color:var(--muted)">※ 색 구획은 보유 배치도(가분할) 기준입니다. ‘추가매입예정부지’는 소유·매입 확정 전까지 매물 면적·광고에서 제외합니다. 필지 구성·허가 범위는 지적도·허가서로 최종 확정됩니다.</p>
+    </div>
+  </div>
+  <div class="panel" id="c5">
+    <div class="visual"><img src="assets/profit-table-capture.jpg" alt="백두측량 구적표 — 자포곡리 토지목록"></div>
+    <div class="info">
+      <span class="rev">보유 자료 · 구적표(2024.09)</span>
+      <h3>구적표·검토 자료 세트</h3>
+      <ul>
+        <li>백두측량 구적표 보유 — 합계 29,813㎡ / 9,018평 확인</li>
+        <li>필지별 지목·지적·계획관리지역 표기</li>
+        <li>조감도(AVUE 렌더)·항공사진·지적도 보유</li>
+        <li>PDF 포트폴리오로 초기 검토시간 단축</li>
+      </ul>
+      <p style="margin:14px 0 0; font-size:13px; color:var(--muted)">※ 구적표는 2024.09 측량 자료로, 소유자 표기는 <b>측량 당시(전 소유주) 기준</b>입니다. 현재 소유는 매도인 본인이며, 권리관계는 등기사항증명서로 확정됩니다.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- 현장 갤러리 -->
+<section id="field"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-kicker">현장 실사</div>
+    <h2 class="sec-title">있는 그대로의 현장</h2>
+    <p class="sec-note">항공, 진입로, 조감도(AVUE 렌더), 지적도, 구적표를 한 번에 확인할 수 있습니다.</p>
+  </div>
+  <div class="gallery">
+    <figure class="big"><img src="assets/site-aerial-top.jpg" alt="항공 전경"><figcaption>항공 전경 · 규모와 평탄지·진입 동선</figcaption></figure>
+    <figure><img src="assets/site-entry-road.jpg" alt="진입로"><figcaption>6m 진입로</figcaption></figure>
+    <figure><img src="assets/project-render-reference.jpg" alt="조감도 AVUE 렌더"><figcaption>조감도 (AVUE 렌더)</figcaption></figure>
+    <figure><img src="assets/parcel-plan-capture.jpg" alt="구획도"><figcaption>지적·구획 캡처</figcaption></figure>
+    <figure><img src="assets/profit-table-capture.jpg" alt="백두측량 구적표"><figcaption>구적표 (토지목록)</figcaption></figure>
+  </div>
+</div></section>
+
+<!-- 입지 -->
+<section id="access"><div class="wrap">
+  <div class="sec-head">
+    <div class="sec-kicker">입지 · 접근</div>
+    <h2 class="sec-title">둔내IC·웰리힐리권, 강원 체류·생활 접근축</h2>
+    <p class="sec-note">둔내IC 권역 기준 약식 설명. 웰리힐리권 체류 수요와 둔내 생활권을 함께 설명할 수 있는 위치입니다. 교통상황에 따라 달라질 수 있으며 공식 소요시간으로 확정하지 않습니다.</p>
+  </div>
+  <div class="access">
+    <div class="map-shot">
+      <img src="assets/site-aerial-top.jpg" alt="현장 항공">
+      <div class="cap">둔내IC 권역 · 6m 진입로 접근 · 상세는 <a href="#access" style="color:var(--green-d);font-weight:800">지도·교통 페이지</a></div>
+    </div>
+    <div class="kpis">
+      <div class="kpi"><small>고속도로</small><b>둔내IC 권역</b></div>
+      <div class="kpi"><small>진입도로</small><b class="num">6m 도로</b></div>
+      <div class="kpi"><small>생활·레저권</small><b>웰리힐리권</b></div>
+      <div class="kpi"><small>매각 방식</small><b>통매각 우선</b></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 정직 고지 -->
+<section id="honest"><div class="wrap">
+  <div class="honest">
+    <div class="top">
+      <h2>◇ 강점과 확인 필요 사항</h2>
+      <p>프로 매수자는 리스크를 감춘 자료를 신뢰하지 않습니다. 확정된 것과 확인이 남은 것을 나눠 투명하게 공개합니다.</p>
+    </div>
+    <div class="body">
+      <div class="col">
+        <h3 style="color:var(--ok)">● 지금 설명 가능한 강점</h3>
+        <ul class="strong">
+          <li>약 1,800평 건축허가·토목 완료 메모 — 허가·토목 진행 프로젝트 인수형</li>
+          <li>스테이·펜션·전원주택 등 체류형 수요에 맞는 대면적(약 9,000평)</li>
+          <li>단독주택 30평 2개동 포함 옵션 — 토지 단독/패키지 매각 유연</li>
+          <li>창고·야드형 대안 수익까지 검토 폭이 넓음</li>
+          <li>토지주 직접 매각 — 중개 단계 없이 자료 신속 제공</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3 style="color:var(--check)">○ 계약 전 확인이 필요한 항목</h3>
+        <ul class="todo">
+          <li>자포곡리/우용리 등 주소 혼재 정리</li>
+          <li>‘추가매입예정부지’(84·30평) 소유·매입 여부 확정 — 확정 전 매물 면적서 제외</li>
+          <li>외 33필지 목록·허가서·허가 유효기간 확인</li>
+          <li>토목공사 완료 범위와 준공·복구 조건 확인</li>
+          <li>상수·오수·전기·도로·산지전용 조건 확인</li>
+          <li>등기·토지이용계획확인원·지적도로 권리·용도 확정</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 문의 -->
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <h2>검토를 시작해 보시겠습니까?</h2>
+    <p>매입·임대·실사용 관심 여부, 검토 목적과 담당자 정보를 알려 주시면 필지목록·등기·토지이용계획·허가서 등 필요한 서류를 발급하여 제공하고 현장 방문 일정을 안내드립니다.</p>
+    <div class="actions">
+      <a href="tel:010-5257-9301" class="btn primary">📞 전화 문의 010-5257-9301</a>
+      <a href="sms:010-5257-9301" class="btn light">💬 문자로 문의</a>
+      <a href="#access" class="btn light">지도·교통 보기</a>
+    </div>
+    <p class="note">토지주 직접 매각 · 제3자 토지 중개 아님 · 실제 계약·신고·세금은 전문가 검토 대상</p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="disc">
+    <b>검토 고지</b> · 본 페이지는 2026-06-28 기준 토지주 제공 자료와 현장 사진을 바탕으로 정리한 예비 검토자료(L1)입니다.
+    등기, 토지이용계획확인원, 지적도, 필지목록, 허가 유효성, 토목 완료 범위, 접도, 오수·전기, 산지전용·인허가 확인 전에는
+    개발·사업 가능성·수익·가격 상승을 보장하지 않습니다. 주소 혼재와 필지 구성은 공부서류로 최종 확정됩니다.
+  </div>
+  <div class="meta">
+    <span>횡성 둔내면 자포곡리 사업용지 · 토지주 직접 매각</span>
+    <span>자료 기준일 2026-06-28 · 다음 업데이트 오전 운영 점검</span>
+  </div>
+</div></footer>
+
+<script>
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.setAttribute('aria-selected','false')});
+      document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on')});
+      t.setAttribute('aria-selected','true');
+      document.getElementById(t.dataset.t).classList.add('on');
+    });
+  });
+  document.querySelectorAll('.toggle').forEach(function(tg){
+    var span = tg.parentElement.querySelector('[data-pyeong]');
+    tg.querySelectorAll('button').forEach(function(b){
+      b.addEventListener('click', function(){
+        tg.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});
+        b.classList.add('on');
+        span.textContent = b.dataset.u==='sqm' ? span.dataset.sqm : span.dataset.pyeong;
+      });
+    });
+  });
+</script>
+</body>
+</html>
