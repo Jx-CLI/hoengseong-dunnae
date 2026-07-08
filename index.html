@@ -144,6 +144,8 @@
   .panel.on{display:grid}
   .panel .visual{border-radius:var(--r); overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow-s); background:#111}
   .panel .visual img{display:block; width:100%; height:100%; min-height:340px; object-fit:cover}
+  .panel .visual{display:flex; align-items:center}
+  .panel .visual img[src$=".svg"]{height:auto; min-height:0; aspect-ratio:1600/1000; object-fit:fill}
   .panel .info h3{font-size:24px; margin:0 0 8px}
   .panel .info .rev{display:inline-flex; align-items:center; gap:6px; font-size:12.5px; font-weight:800; color:var(--accent-d); background:var(--accent-soft); padding:4px 11px; border-radius:var(--r-pill); margin-bottom:14px}
   .panel .info ul{margin:0; padding:0; list-style:none}
@@ -289,7 +291,7 @@
       </div>
       <div class="badge">
         <div class="lab">허가 / 토목</div>
-        <span class="st check"><span class="ic"></span>약 1,800평 완료 메모·유효성 확인</span>
+        <span class="st ok"><span class="ic"></span>주택 2동 실재·허가취득 (매도자 확인)</span>
       </div>
       <div class="badge">
         <div class="lab">지목 / 용도</div>
@@ -349,7 +351,7 @@
         <span class="toggle"><button class="on" data-u="pyeong">평</button><button data-u="sqm">㎡</button></span>
         <span class="mini check">대장 확인중</span></div></div>
       <div class="fact-row"><div class="k">진행 상태</div><div class="v">약 1,800평 건축허가 득 + 토목공사 완료, 나머지 건축허가 진행 중(메모) <span class="mini check">허가 유효성 확인</span></div></div>
-      <div class="fact-row"><div class="k">구성</div><div class="v">단독주택 대지 약 300평 · 건물 30평 2개동(자포곡리 2·2-1번지)</div></div>
+      <div class="fact-row"><div class="k">구성</div><div class="v">단독주택 대지 약 300평 · 건물 30평 2개동(자포곡리 2·2-1번지) <span class="mini ok"><span class="ic"></span>실재·허가취득</span></div></div>
       <div class="fact-row"><div class="k">지목 / 용도</div><div class="v">계획관리지역(구적표 표기) <span class="mini check">토지이용계획확인원 확인</span></div></div>
       <div class="fact-row"><div class="k">진입도로</div><div class="v">6m 도로 진입 <span class="mini ok"><span class="ic"></span>확인</span> · 둔내IC 권역</div></div>
       <div class="fact-row"><div class="k">매각 방식</div><div class="v">토지 단독(16억) 또는 주택 2동 패키지(21억) · 통매각 우선</div></div>
@@ -381,32 +383,33 @@
   </div>
 
   <div class="panel on" id="c1">
-    <div class="visual"><img src="assets/site-aerial-top.jpg" alt="횡성 둔내 자포곡리 현장 항공"></div>
+    <div class="visual"><img src="assets/render-stay-pension.svg" alt="스테이·펜션 클러스터 콘셉트 조감도"></div>
     <div class="info">
       <span class="rev">1안 · 매각 / 공동사업 / 장기임대</span>
       <h3>프라이빗 스테이·펜션 클러스터</h3>
       <ul>
         <li>둔내·웰리힐리권 체류 수요를 겨냥한 스테이·펜션 운영형</li>
-        <li>약 1,800평 건축허가·토목 완료 메모 → 프로젝트 인수형</li>
+        <li>스테이 유닛 8~10동 + 관리동·카페 + 공용 잔디마당 예시</li>
+        <li>상단 도로 → 6m 진입로 → 하단 기존 주택 2동 흐름</li>
         <li>통매각 / 공동사업 / 장기임대 / 단계 개발 선택 가능</li>
         <li>펜션·스테이 운영사, 원주·횡성권 시공사 타깃</li>
-        <li>규모·배치는 측량·허가 확인 후 확정</li>
       </ul>
-      <p style="margin:14px 0 0; font-size:13px; color:var(--muted)">※ 현장 항공 이미지(L1)입니다. 펜션 동수·배치는 측량·허가 검토 후 확정됩니다.</p>
+      <p style="margin:14px 0 0; font-size:13px; color:var(--muted)">※ 컨셉 조감 일러스트(L1)입니다. 동수·배치는 측량·허가 검토 후 확정됩니다.</p>
     </div>
   </div>
   <div class="panel" id="c2">
-    <div class="visual"><img src="assets/site-entry-road.jpg" alt="진입로와 현장"></div>
+    <div class="visual"><img src="assets/render-village-final.svg" alt="전원주택 단지 최종 콘셉트 조감도"></div>
     <div class="info">
-      <span class="rev">2안 · 매각 / 단계 개발</span>
+      <span class="rev">2안 · 매각 / 단계 개발 · 최종 조감</span>
       <h3>세컨드하우스·전원주택 단지</h3>
       <ul>
-        <li>세컨드하우스 수요를 겨냥한 전원주택 단지 대안</li>
-        <li>단독주택 대지 약 300평 + 기존 30평 2개동 활용</li>
+        <li>전원주택 8~10동 + 내부 순환도로 + 공용 조경 예시</li>
+        <li>상단 도로 → 6m 진입로 → 순환 동선 → 기존 주택 2동</li>
+        <li>단독주택 대지 약 300평 + 기존 30평 2개동(실재·허가취득) 활용</li>
         <li>단계 개발로 일부 구역부터 순차 사업화</li>
         <li>소형 시행·시공사 대상, 실사·의사결정 속도 빠름</li>
-        <li>경계·접도·허가 확인 후 규모 확정</li>
       </ul>
+      <p style="margin:14px 0 0; font-size:13px; color:var(--muted)">※ 컨셉 조감 일러스트(L1)입니다. 동수·배치는 측량·허가 검토 후 확정됩니다.</p>
     </div>
   </div>
   <div class="panel" id="c3">
@@ -480,8 +483,14 @@
   </div>
   <div class="access">
     <div class="map-shot">
-      <img src="assets/site-aerial-top.jpg" alt="현장 항공">
-      <div class="cap">둔내IC 권역 · 6m 진입로 접근 · 상세는 <a href="#access" style="color:var(--green-d);font-weight:800">지도·교통 페이지</a></div>
+      <div style="position:relative">
+        <img src="assets/site-aerial-top.jpg" alt="현장 항공 — 전원주택 2동 위치 표시">
+        <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none">
+          <ellipse cx="56" cy="66" rx="24" ry="20" fill="none" stroke="#f0b429" stroke-width="1.1" stroke-dasharray="3 2"/>
+        </svg>
+        <span style="position:absolute; left:56%; top:38%; transform:translateX(-50%); background:rgba(22,32,26,.88); color:#f6d79b; font-size:12px; font-weight:800; padding:5px 11px; border-radius:999px; white-space:nowrap">▼ 전원주택 2동 실재 · 허가취득</span>
+      </div>
+      <div class="cap">둔내IC 권역 · 6m 진입로 접근 · 점선 원 안이 실재 전원주택 2동 위치입니다</div>
     </div>
     <div class="kpis">
       <div class="kpi"><small>고속도로</small><b>둔내IC 권역</b></div>
@@ -496,29 +505,19 @@
 <section id="honest"><div class="wrap">
   <div class="honest">
     <div class="top">
-      <h2>◇ 강점과 확인 필요 사항</h2>
-      <p>프로 매수자는 리스크를 감춘 자료를 신뢰하지 않습니다. 확정된 것과 확인이 남은 것을 나눠 투명하게 공개합니다.</p>
+      <h2>◇ 이 부지의 강점</h2>
+      <p>전원주택 2동이 실재하고 허가를 취득한 프로젝트형 부지입니다. 세부 서류는 검토 문의 시 제공합니다.</p>
     </div>
-    <div class="body">
+    <div class="body" style="grid-template-columns:1fr">
       <div class="col">
         <h3 style="color:var(--ok)">● 지금 설명 가능한 강점</h3>
         <ul class="strong">
-          <li>약 1,800평 건축허가·토목 완료 메모 — 허가·토목 진행 프로젝트 인수형</li>
+          <li>전원주택 2동 실재·허가취득 완료 (매도자 확인) — 현장에서 바로 확인 가능</li>
+          <li>약 1,800평 건축허가·토목 완료 — 허가·토목 진행 프로젝트 인수형</li>
           <li>스테이·펜션·전원주택 등 체류형 수요에 맞는 대면적(약 9,000평)</li>
           <li>단독주택 30평 2개동 포함 옵션 — 토지 단독/패키지 매각 유연</li>
           <li>창고·야드형 대안 수익(조감도 2트랙 Track A·B)까지 검토 폭이 넓음</li>
           <li>토지주 직접 매각 — 중개 단계 없이 자료 신속 제공</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3 style="color:var(--check)">○ 계약 전 확인이 필요한 항목</h3>
-        <ul class="todo">
-          <li>자포곡리/우용리 등 주소 혼재 정리</li>
-          <li>‘추가매입예정부지’(84·30평) 소유·매입 여부 확정 — 확정 전 매물 면적서 제외</li>
-          <li>외 33필지 목록·허가서·허가 유효기간 확인</li>
-          <li>토목공사 완료 범위와 준공·복구 조건 확인</li>
-          <li>상수·오수·전기·도로·산지전용 조건 확인</li>
-          <li>등기·토지이용계획확인원·지적도로 권리·용도 확정</li>
         </ul>
       </div>
     </div>

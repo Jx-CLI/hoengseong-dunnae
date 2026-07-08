@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Pretendard,'Noto Sans KR',Arial,sans-serif">
+  <defs>
+    <linearGradient id="forest2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c5038"/><stop offset="1" stop-color="#22402c"/>
+    </linearGradient>
+    <linearGradient id="meadow2" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#cde2ab"/><stop offset="1" stop-color="#adcb8c"/>
+    </linearGradient>
+    <g id="tr">
+      <ellipse cx="0" cy="7" rx="11" ry="4" fill="#1d3626" opacity=".35"/>
+      <circle cx="0" cy="0" r="11" fill="#3d7350"/>
+      <circle cx="-4" cy="-4" r="6" fill="#4d8a60" opacity=".9"/>
+    </g>
+    <g id="trS">
+      <ellipse cx="0" cy="5" rx="8" ry="3" fill="#1d3626" opacity=".35"/>
+      <circle cx="0" cy="0" r="7.5" fill="#46815a"/>
+    </g>
+    <!-- 전원주택 필지: 잔디 + 박공지붕 주택 + 진입 드라이브 -->
+    <g id="lot">
+      <rect x="-58" y="-42" width="132" height="102" rx="14" fill="#c6e0a0" stroke="#9dbd7c" stroke-width="2.5"/>
+      <ellipse cx="8" cy="34" rx="44" ry="9" fill="#1d3626" opacity=".25"/>
+      <rect x="-24" y="0" width="64" height="30" rx="2" fill="#f4eee3" stroke="#c9bfae"/>
+      <polygon points="-30,2 8,-22 46,2" fill="#8d6e56"/>
+      <polygon points="8,-22 46,2 46,8 8,-16" fill="#6d523e"/>
+      <rect x="2" y="12" width="12" height="18" fill="#7a6a55"/>
+      <rect x="-20" y="8" width="14" height="11" rx="1.5" fill="#bcd9e2"/>
+      <rect x="44" y="26" width="26" height="12" rx="3" fill="#cbc4b2"/>
+      <use href="#trS" transform="translate(-42,-24) scale(.8)"/>
+    </g>
+    <g id="lotB">
+      <rect x="-58" y="-42" width="132" height="102" rx="14" fill="#cbe3a7" stroke="#9dbd7c" stroke-width="2.5"/>
+      <ellipse cx="8" cy="34" rx="44" ry="9" fill="#1d3626" opacity=".25"/>
+      <rect x="-24" y="0" width="64" height="30" rx="2" fill="#efe7d8" stroke="#c9bfae"/>
+      <polygon points="-30,2 8,-22 46,2" fill="#5a6c74"/>
+      <polygon points="8,-22 46,2 46,8 8,-16" fill="#43525a"/>
+      <rect x="2" y="12" width="12" height="18" fill="#6f6250"/>
+      <rect x="-20" y="8" width="14" height="11" rx="1.5" fill="#c6dde5"/>
+      <rect x="44" y="26" width="26" height="12" rx="3" fill="#cbc4b2"/>
+      <use href="#trS" transform="translate(52,-26) scale(.8)"/>
+    </g>
+    <g id="houseOr2">
+      <ellipse cx="30" cy="46" rx="42" ry="9" fill="#1d3626" opacity=".3"/>
+      <rect x="0" y="16" width="60" height="28" rx="2" fill="#f3ece0" stroke="#c9bfae"/>
+      <polygon points="-6,18 30,-6 66,18" fill="#cf6b3c"/>
+      <polygon points="30,-6 66,18 66,24 30,0" fill="#a9502a"/>
+      <rect x="26" y="28" width="11" height="16" fill="#7a6a55"/>
+    </g>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#forest2)"/>
+  <g opacity=".9">
+    <circle cx="120" cy="300" r="90" fill="#2f5a3d"/><circle cx="70" cy="520" r="110" fill="#284f36"/><circle cx="180" cy="740" r="100" fill="#2f5a3d"/>
+    <circle cx="1480" cy="260" r="100" fill="#2f5a3d"/><circle cx="1520" cy="560" r="120" fill="#284f36"/><circle cx="1420" cy="840" r="110" fill="#2f5a3d"/>
+    <circle cx="420" cy="950" r="90" fill="#284f36"/><circle cx="900" cy="980" r="100" fill="#2f5a3d"/><circle cx="1200" cy="950" r="90" fill="#284f36"/>
+  </g>
+
+  <!-- 상단 지방도 -->
+  <path d="M0,128 C400,96 1100,70 1600,88" fill="none" stroke="#565b56" stroke-width="34"/>
+  <path d="M0,128 C400,96 1100,70 1600,88" fill="none" stroke="#fff" stroke-width="2.4" stroke-dasharray="18 14" opacity=".8"/>
+
+  <!-- 부지 -->
+  <path d="M348,212 C520,140 770,118 950,158 C1130,196 1258,306 1272,438 C1286,576 1206,732 1078,830 C958,918 748,932 628,868 C492,796 396,652 368,512 C346,404 326,292 348,212 Z"
+        fill="url(#meadow2)" stroke="#87a86b" stroke-width="4"/>
+
+  <!-- 6m 진입로 + 내부 순환 -->
+  <path d="M806,112 C790,220 802,300 800,368" fill="none" stroke="#8f958e" stroke-width="24"/>
+  <path d="M806,112 C790,220 802,300 800,368" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="14 12" opacity=".85"/>
+  <ellipse cx="800" cy="540" rx="270" ry="180" fill="none" stroke="#8f958e" stroke-width="20"/>
+  <ellipse cx="800" cy="540" rx="270" ry="180" fill="none" stroke="#fff" stroke-width="1.8" stroke-dasharray="12 11" opacity=".8"/>
+  <path d="M1062,590 C1110,640 1146,690 1170,742" fill="none" stroke="#8f958e" stroke-width="16"/>
+
+  <!-- 중앙 공용 조경 -->
+  <ellipse cx="800" cy="540" rx="150" ry="92" fill="#cfe6a8" stroke="#a3c47f" stroke-width="3"/>
+  <ellipse cx="836" cy="560" rx="42" ry="22" fill="#a9cfe0" stroke="#86b4c9" stroke-width="2.5"/>
+  <use href="#tr" transform="translate(742,520)"/><use href="#trS" transform="translate(788,502)"/><use href="#trS" transform="translate(760,576)"/>
+
+  <!-- 전원주택 10동: 순환도로 바깥 -->
+  <use href="#lot"  transform="translate(560,320) scale(.9)"/>
+  <use href="#lotB" transform="translate(760,282) scale(.9)"/>
+  <use href="#lot"  transform="translate(968,312) scale(.9)"/>
+  <use href="#lotB" transform="translate(1108,430) scale(.9)"/>
+  <use href="#lot"  transform="translate(1120,592) scale(.9)"/>
+  <use href="#lotB" transform="translate(478,450) scale(.9)"/>
+  <use href="#lot"  transform="translate(470,608) scale(.9)"/>
+  <use href="#lotB" transform="translate(580,742) scale(.9)"/>
+  <use href="#lot"  transform="translate(772,790) scale(.9)"/>
+  <use href="#lotB" transform="translate(946,752) scale(.9)"/>
+
+  <!-- 기존 전원주택 2동 -->
+  <use href="#houseOr2" transform="translate(1120,742) scale(.96)"/>
+  <use href="#houseOr2" transform="translate(1206,672) scale(.9)"/>
+  <ellipse cx="1176" cy="722" rx="104" ry="80" fill="none" stroke="#f0b429" stroke-width="4" stroke-dasharray="10 8"/>
+
+  <!-- 부지 수목 -->
+  <use href="#tr" transform="translate(430,250)"/><use href="#tr" transform="translate(1180,368)"/><use href="#tr" transform="translate(672,884)"/>
+  <use href="#trS" transform="translate(920,214)"/><use href="#trS" transform="translate(404,540)"/><use href="#trS" transform="translate(1226,542)"/>
+  <use href="#trS" transform="translate(880,876)"/><use href="#trS" transform="translate(508,796)"/>
+
+  <!-- 라벨 -->
+  <g font-weight="800">
+    <rect x="36" y="30" width="512" height="66" rx="12" fill="#16241a" opacity=".92"/>
+    <text x="60" y="58" fill="#fff" font-size="24">횡성 둔내 · 전원주택 단지 최종 조감</text>
+    <text x="60" y="84" fill="#f0c98a" font-size="15" font-weight="700">콘셉트 B · 8~10동 + 내부 순환도로 + 공용 조경 예시</text>
+
+    <rect x="666" y="196" width="120" height="34" rx="17" fill="#c2652f"/>
+    <text x="726" y="218" fill="#fff" font-size="16" text-anchor="middle">6m 진입로</text>
+
+    <rect x="730" y="452" width="140" height="30" rx="15" fill="#fff" opacity=".95"/>
+    <text x="800" y="472" fill="#1e4c33" font-size="14" text-anchor="middle">공용 조경 · 연못</text>
+
+    <rect x="1040" y="846" width="256" height="34" rx="17" fill="#16241a" opacity=".92"/>
+    <text x="1168" y="868" fill="#f6d79b" font-size="15" text-anchor="middle">기존 전원주택 2동 · 실재</text>
+
+    <rect x="1160" y="30" width="404" height="34" rx="17" fill="#fff" opacity=".92"/>
+    <text x="1362" y="52" fill="#697465" font-size="14" text-anchor="middle">컨셉 조감 일러스트(L1) · 확정 배치·허가 자료 아님</text>
+  </g>
+</svg>

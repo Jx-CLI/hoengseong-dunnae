@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Pretendard,'Noto Sans KR',Arial,sans-serif">
+  <defs>
+    <linearGradient id="forest" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2c5038"/><stop offset="1" stop-color="#22402c"/>
+    </linearGradient>
+    <linearGradient id="meadow" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#c9dfa6"/><stop offset="1" stop-color="#a9c987"/>
+    </linearGradient>
+    <linearGradient id="pad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dcbf96"/><stop offset="1" stop-color="#c9a97e"/>
+    </linearGradient>
+    <g id="tree">
+      <ellipse cx="0" cy="7" rx="11" ry="4" fill="#1d3626" opacity=".35"/>
+      <circle cx="0" cy="0" r="11" fill="#3d7350"/>
+      <circle cx="-4" cy="-4" r="6" fill="#4d8a60" opacity=".9"/>
+    </g>
+    <g id="treeS">
+      <ellipse cx="0" cy="5" rx="8" ry="3" fill="#1d3626" opacity=".35"/>
+      <circle cx="0" cy="0" r="7.5" fill="#46815a"/>
+    </g>
+    <!-- 스테이 캐빈: 우드 바디 + 통유리 + 모노피치 지붕 + 데크 -->
+    <g id="cabin">
+      <ellipse cx="34" cy="52" rx="46" ry="10" fill="#1d3626" opacity=".25"/>
+      <rect x="-14" y="34" width="96" height="18" rx="4" fill="#d9c49b"/>
+      <rect x="-14" y="34" width="96" height="4" rx="2" fill="#e8d8b4"/>
+      <rect x="0" y="4" width="68" height="34" rx="3" fill="#5c4b39"/>
+      <rect x="8" y="10" width="30" height="24" rx="2" fill="#bcd9e2"/>
+      <rect x="44" y="12" width="14" height="22" rx="2" fill="#8a7357"/>
+      <polygon points="-4,6 72,-2 74,6 -2,12" fill="#383025"/>
+    </g>
+    <!-- 기존 전원주택 (주황 지붕) -->
+    <g id="houseOr">
+      <ellipse cx="30" cy="46" rx="42" ry="9" fill="#1d3626" opacity=".3"/>
+      <rect x="0" y="16" width="60" height="28" rx="2" fill="#f3ece0" stroke="#c9bfae"/>
+      <polygon points="-6,18 30,-6 66,18" fill="#cf6b3c"/>
+      <polygon points="30,-6 66,18 66,24 30,0" fill="#a9502a"/>
+      <rect x="26" y="28" width="11" height="16" fill="#7a6a55"/>
+    </g>
+    <g id="car"><rect x="0" y="0" width="18" height="9" rx="2.5" fill="#e8e6e0"/><rect x="3" y="1.5" width="7" height="6" rx="1.5" fill="#9fb4bb"/></g>
+  </defs>
+
+  <!-- 배경 숲 -->
+  <rect width="1600" height="1000" fill="url(#forest)"/>
+  <g opacity=".9">
+    <circle cx="120" cy="300" r="90" fill="#2f5a3d"/><circle cx="70" cy="520" r="110" fill="#2850366"/><circle cx="180" cy="740" r="100" fill="#2f5a3d"/>
+    <circle cx="1480" cy="260" r="100" fill="#2f5a3d"/><circle cx="1520" cy="560" r="120" fill="#284f36"/><circle cx="1420" cy="840" r="110" fill="#2f5a3d"/>
+    <circle cx="420" cy="950" r="90" fill="#284f36"/><circle cx="900" cy="980" r="100" fill="#2f5a3d"/><circle cx="1200" cy="950" r="90" fill="#284f36"/>
+  </g>
+
+  <!-- 상단 지방도 -->
+  <path d="M0,128 C400,96 1100,70 1600,88" fill="none" stroke="#565b56" stroke-width="34"/>
+  <path d="M0,128 C400,96 1100,70 1600,88" fill="none" stroke="#fff" stroke-width="2.4" stroke-dasharray="18 14" opacity=".8"/>
+
+  <!-- 부지 -->
+  <path d="M348,212 C520,140 770,118 950,158 C1130,196 1258,306 1272,438 C1286,576 1206,732 1078,830 C958,918 748,932 628,868 C492,796 396,652 368,512 C346,404 326,292 348,212 Z"
+        fill="url(#meadow)" stroke="#87a86b" stroke-width="4"/>
+  <path d="M348,212 C520,140 770,118 950,158 C1130,196 1258,306 1272,438" fill="none" stroke="#e8f2d5" stroke-width="2" opacity=".6"/>
+
+  <!-- 테라스 라인 -->
+  <path d="M430,330 C640,290 980,285 1180,340" fill="none" stroke="#93b276" stroke-width="3" opacity=".7"/>
+  <path d="M420,540 C660,500 980,495 1210,560" fill="none" stroke="#93b276" stroke-width="3" opacity=".7"/>
+  <path d="M480,730 C680,700 950,700 1120,750" fill="none" stroke="#93b276" stroke-width="3" opacity=".7"/>
+
+  <!-- 6m 진입로: 상단 도로 → 중앙 스파인 -->
+  <path d="M806,112 C782,260 836,420 794,566 C762,684 800,780 834,876" fill="none" stroke="#8f958e" stroke-width="24"/>
+  <path d="M806,112 C782,260 836,420 794,566 C762,684 800,780 834,876" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="14 12" opacity=".85"/>
+  <!-- 지선 -->
+  <path d="M796,320 C700,340 630,352 566,368" fill="none" stroke="#9aa093" stroke-width="14"/>
+  <path d="M812,470 C920,486 990,494 1052,510" fill="none" stroke="#9aa093" stroke-width="14"/>
+  <path d="M786,640 C700,660 640,672 590,690" fill="none" stroke="#9aa093" stroke-width="14"/>
+
+  <!-- 공용 잔디마당 -->
+  <ellipse cx="810" cy="450" rx="70" ry="40" fill="#cfe6a8" stroke="#a3c47f" stroke-width="3"/>
+  <use href="#treeS" transform="translate(778,440)"/><use href="#treeS" transform="translate(846,458)"/>
+
+  <!-- 관리동·카페 (진입부) -->
+  <g transform="translate(852,168)">
+    <ellipse cx="42" cy="54" rx="56" ry="11" fill="#1d3626" opacity=".28"/>
+    <rect x="0" y="10" width="86" height="40" rx="4" fill="#4c4238"/>
+    <rect x="8" y="18" width="46" height="26" rx="2" fill="#c4dde5"/>
+    <polygon points="-6,12 92,2 94,12 -4,20" fill="#2e2822"/>
+    <rect x="-4" y="50" width="96" height="12" rx="3" fill="#d9c49b"/>
+  </g>
+  <g transform="translate(960,150)"><use href="#car"/><use href="#car" x="24"/><use href="#car" x="48"/><use href="#car" y="14"/><use href="#car" x="24" y="14"/></g>
+
+  <!-- 스테이 유닛 9동 -->
+  <use href="#cabin" transform="translate(500,300) scale(.92)"/>
+  <use href="#cabin" transform="translate(560,430) scale(.92)"/>
+  <use href="#cabin" transform="translate(506,566) scale(.92)"/>
+  <use href="#cabin" transform="translate(560,700) scale(.92)"/>
+  <use href="#cabin" transform="translate(1044,332) scale(.92)"/>
+  <use href="#cabin" transform="translate(1090,470) scale(.92)"/>
+  <use href="#cabin" transform="translate(1044,606) scale(.92)"/>
+  <use href="#cabin" transform="translate(918,704) scale(.92)"/>
+  <use href="#cabin" transform="translate(690,780) scale(.92)"/>
+
+  <!-- 기존 전원주택 2동 (하단 우측) -->
+  <use href="#houseOr" transform="translate(1082,742)"/>
+  <use href="#houseOr" transform="translate(1176,676) scale(.94)"/>
+  <ellipse cx="1140" cy="742" rx="118" ry="86" fill="none" stroke="#f0b429" stroke-width="4" stroke-dasharray="10 8"/>
+
+  <!-- 부지 내 수목 -->
+  <use href="#tree" transform="translate(430,250)"/><use href="#tree" transform="translate(660,236)"/><use href="#tree" transform="translate(1180,410)"/>
+  <use href="#tree" transform="translate(452,470)"/><use href="#tree" transform="translate(1196,600)"/><use href="#tree" transform="translate(700,600)"/>
+  <use href="#treeS" transform="translate(940,260)"/><use href="#treeS" transform="translate(620,520)"/><use href="#treeS" transform="translate(980,800)"/>
+  <use href="#treeS" transform="translate(760,880)"/><use href="#treeS" transform="translate(500,800)"/>
+
+  <!-- 라벨 -->
+  <g font-weight="800">
+    <rect x="36" y="30" width="470" height="66" rx="12" fill="#16241a" opacity=".92"/>
+    <text x="60" y="58" fill="#fff" font-size="24">횡성 둔내 · 스테이·펜션 클러스터</text>
+    <text x="60" y="84" fill="#f0c98a" font-size="15" font-weight="700">콘셉트 A · 유닛 8~10동 예시 배치</text>
+
+    <rect x="640" y="586" width="120" height="34" rx="17" fill="#c2652f"/>
+    <text x="700" y="608" fill="#fff" font-size="16" text-anchor="middle">6m 진입로</text>
+
+    <rect x="880" y="230" width="128" height="30" rx="15" fill="#fff" opacity=".95"/>
+    <text x="944" y="250" fill="#1e4c33" font-size="14" text-anchor="middle">관리동 · 카페</text>
+
+    <rect x="742" y="392" width="140" height="30" rx="15" fill="#fff" opacity=".95"/>
+    <text x="812" y="412" fill="#1e4c33" font-size="14" text-anchor="middle">공용 잔디마당</text>
+
+    <rect x="1010" y="846" width="256" height="34" rx="17" fill="#16241a" opacity=".92"/>
+    <text x="1138" y="868" fill="#f6d79b" font-size="15" text-anchor="middle">기존 전원주택 2동 · 실재</text>
+
+    <rect x="1160" y="30" width="404" height="34" rx="17" fill="#fff" opacity=".92"/>
+    <text x="1362" y="52" fill="#697465" font-size="14" text-anchor="middle">컨셉 조감 일러스트(L1) · 확정 배치·허가 자료 아님</text>
+  </g>
+</svg>
